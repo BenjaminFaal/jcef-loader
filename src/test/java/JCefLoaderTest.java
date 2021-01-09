@@ -1,25 +1,3 @@
-# jcef-loader
-Loads JCEF from https://github.com/jcefbuild/jcefbuild/releases
-
-[![Release](https://jitpack.io/v/BenjaminFaal/jcef-loader.svg)](https://jitpack.io/#BenjaminFaal/jcef-loader)
-## Maven
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-
-<dependency>
-	<groupId>com.github.BenjaminFaal</groupId>
-	<artifactId>jcef-loader</artifactId>
-	<version>0.0.1</version>
-</dependency>
-```
-
-## Usage
-```java
 import com.benjaminfaal.jcef.loader.JCefLoader;
 import org.cef.CefApp;
 import org.cef.CefClient;
@@ -63,4 +41,3 @@ public class JCefLoaderTest {
     }
 
 }
-```

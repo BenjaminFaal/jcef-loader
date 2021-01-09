@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.BenjaminFaal</groupId>
+    <artifactId>jcef-loader</artifactId>
+    <version>0.0.1</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <zip4j.version>2.6.4</zip4j.version>
+        <jcef.version>84.3.8+gc8a556f+chromium-84.0.4147.105-build-17</jcef.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jcef-maven</id>
+            <url>https://friwi.me/jcef/maven</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>net.lingala.zip4j</groupId>
+            <artifactId>zip4j</artifactId>
+            <version>${zip4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.cef</groupId>
+            <artifactId>jcef-api</artifactId>
+            <version>${jcef.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
