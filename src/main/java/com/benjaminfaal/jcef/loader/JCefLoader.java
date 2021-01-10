@@ -23,6 +23,13 @@ public class JCefLoader {
 
     private static boolean loaded;
 
+    public static CefApp getInstance() {
+        if (!loaded) {
+            throw new IllegalStateException("JCEF is not loaded yet, use installAndLoad to load and create an instance");
+        }
+        return CefApp.getInstance();
+    }
+
     /**
      * Installs the default JCEF version to the destination and loads a {@link CefApp}.
      *
@@ -45,6 +52,9 @@ public class JCefLoader {
      * @return a {@link CefApp} loaded from the destination directory
      */
     public static CefApp installAndLoad(String version, Path destination, CefSettings settings, String... args) throws IOException {
+        if (loaded) {
+            return CefApp.getInstance();
+        }
         if (Files.exists(destination) && !Files.isDirectory(destination)) {
             throw new IllegalArgumentException("Destination: " + destination + " must be a directory");
         }
